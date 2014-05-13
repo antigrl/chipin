@@ -1,0 +1,29 @@
+html, body, div, img {
+	font-family: sans-serif;
+	width: 100%;
+	margin: 0;
+	padding: 0;
+	border: 0;
+}
+
+body {
+	background: black;
+	text-align: center;
+}
+
+#phone {
+	width: 420px;
+	overflow: hidden;
+	margin-top: 12px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#header {
+	height: 28px;
+}
+
+#screen {
+	height: 718px;
+	background: white;
+}

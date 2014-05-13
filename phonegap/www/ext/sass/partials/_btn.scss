@@ -1,0 +1,102 @@
+@mixin button-states($red) {
+  background-color: $red;
+  &:hover,
+  &:focus {
+    background-color: scale-color($red, $lightness: 20%);
+  }
+  &:active,
+  &.active {
+    background-color: scale-color($red, $lightness: -15%);
+  }
+}
+
+// Buttons -----------------------
+.btn {
+  border: none;
+  background: $green;
+  color: $black;
+  text-decoration: none;
+  text-shadow: none;
+  font-size: 1em;
+  padding: 5px 10px;
+  outline: none;
+  cursor: pointer;
+  @include border-radius(2px);
+  // @include box-shadow(none);
+  @include transition(0.25s);
+  &:hover,
+  &:focus {
+    background-color: scale-color($green, $lightness: 20%);
+    color: $black;
+    @include transition(0.25s);
+  }
+  &:active,
+  &.active {
+    background-color: scale-color($green, $lightness: -15%);
+    color: rgba($black, 0.75);
+    // @include box-shadow(none);
+  }
+  &.disabled,
+  &[disabled] {
+    background-color: $gray;
+    color: $black;
+  }
+  // Sizes -----------------------
+  &.btn-large {
+    padding-bottom: 12px;
+    padding-top: 13px;
+  }
+  // Colors -----------------------
+  &.btn-primary {
+    @include button-states($firm);
+  }
+  &.btn-info {
+    @include button-states($info);
+  }
+  &.btn-danger {
+    @include button-states($danger);
+  }
+  &.btn-success {
+    @include button-states($success);
+  }
+  &.btn-warning {
+    @include button-states($warning);
+  }
+  // Button with icon inside
+  .btn-toolbar & {
+    font-size: 18px;
+    padding: 10px 14px 9px;
+    &:first-child {
+      @include border-radius(6px 0 0 6px);
+    }
+    &:last-child {
+      @include border-radius(0 6px 6px 0);
+    }
+  }
+}
+
+.btn-toolbar {
+  .btn.active {
+    color: $black;
+  }
+}
+
+.btn-large {
+  @include border-radius(2px);
+  @include background-clip(padding-box);
+  background-color: #29292d;
+  width: 240px;
+  padding: 10px 0;
+  color: $grayLight;
+  border: none;
+  font-size: 1.2em;
+  @include text-shadow(2px 2px 5px rgba(0,0,0,.75));
+  cursor: pointer;
+  outline: none;
+  &:hover {
+    color: darken($gray, 10%);
+  }
+  &:active {
+    color: darken($gray, 30%);
+  }
+}

@@ -1,0 +1,48 @@
+
+<!-- <header>
+  <button class="pull-left"><i class="icon-chevron-left"></i>   Back</button>
+  <ul class="pull-right">
+    <li><button ng-click="skip()">Skip</button></li>
+    <li><button ng-click="logout()" title="Logout"><i class="icon-power-off"></i></button></li>
+  </ul>
+
+{{loggedin}}
+</header> -->
+<div class="container">
+  <div class="box">
+    <h1 class="header">ChipIn</h1>
+    <ul class="input-list">
+      <li class="title">Add a Card</li>
+      <li><input ng-model='card.firstName' type="text" placeholder="First Name" ng-model="first" value='Keith'></li>
+      <li><input ng-model='card.lastName' type="text" placeholder="Last Name" ng-model="last" value='Chester'></li>
+      <li><input ng-model='card.number' type="text" placeholder="Card Number" ng-model="card" value='1234123412341234'></li>
+      <li class="title">Expiration</li>
+        <select ng-model='card.month'>
+          <option value='01'>January</option>
+          <option value='02'>February</option>
+          <option value='03'>March</option>
+          <option value='04'>April</option>
+          <option value='05'>May</option>
+          <option value='06'>June</option>
+          <option value='07'>July</option>
+          <option value='08'>August</option>
+          <option value='09'>September</option>
+          <option value='10'>October</option>
+          <option value='11'>November</option>
+          <option value='12'>December</option>
+        </select>
+        <select ng-model='card.year'>
+          <option>2013</option>
+          <option>2014</option>
+          <option>2015</option>
+          <option>2016</option>
+          <option>2017</option>
+          <option>2018</option>
+          <option>2019</option>
+          <option>2020</option>
+        </select>
+      <li><input ng-model='card.cvc' class="cvc" type="text" placeholder="CVC" ng-model="cvc" input='123'></li>
+      <li><button class="btn-large" ng-click="addCard()">Add Card</button></li>
+    </ul>
+  </div>
+</div>
